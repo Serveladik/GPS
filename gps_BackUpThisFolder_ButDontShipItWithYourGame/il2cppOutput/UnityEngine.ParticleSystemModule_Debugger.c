@@ -15,7 +15,7 @@
 #if IL2CPP_MONO_DEBUGGER
 static const Il2CppMethodExecutionContextInfo g_methodExecutionContextInfos[1] = 
 {
-	{ 16538, 0,  0 } /*tableIndex: 0 */,
+	{ 16539, 0,  0 } /*tableIndex: 0 */,
 };
 #else
 static const Il2CppMethodExecutionContextInfo g_methodExecutionContextInfos[1] = { { 0, 0, 0 } };
@@ -237,14 +237,14 @@ static const Il2CppSequencePointSourceFile g_sequencePointSourceFiles[1] = { NUL
 #if IL2CPP_MONO_DEBUGGER
 static const Il2CppTypeSourceFilePair g_typeSourceFiles[8] = 
 {
-	{ 6887, 1 },
-	{ 6887, 2 },
-	{ 6887, 3 },
-	{ 6882, 3 },
-	{ 6883, 1 },
-	{ 6883, 4 },
+	{ 6888, 1 },
+	{ 6888, 2 },
+	{ 6888, 3 },
+	{ 6883, 3 },
+	{ 6884, 1 },
 	{ 6884, 4 },
 	{ 6885, 4 },
+	{ 6886, 4 },
 };
 #else
 static const Il2CppTypeSourceFilePair g_typeSourceFiles[1] = { { 0, 0 } };

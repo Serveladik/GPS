@@ -220,13 +220,13 @@ static const Il2CppSequencePointSourceFile g_sequencePointSourceFiles[1] = { NUL
 #if IL2CPP_MONO_DEBUGGER
 static const Il2CppTypeSourceFilePair g_typeSourceFiles[7] = 
 {
+	{ 6898, 1 },
 	{ 6897, 1 },
-	{ 6896, 1 },
-	{ 6900, 1 },
-	{ 6903, 1 },
-	{ 6904, 2 },
-	{ 6905, 3 },
-	{ 6908, 4 },
+	{ 6901, 1 },
+	{ 6904, 1 },
+	{ 6905, 2 },
+	{ 6906, 3 },
+	{ 6909, 4 },
 };
 #else
 static const Il2CppTypeSourceFilePair g_typeSourceFiles[1] = { { 0, 0 } };
