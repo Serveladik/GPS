@@ -38,18 +38,18 @@ static const Il2CppMethodExecutionContextInfoIndex g_methodExecutionContextInfoI
 IL2CPP_EXTERN_C Il2CppSequencePoint g_sequencePointsUnityEngine_ImageConversionModule[];
 Il2CppSequencePoint g_sequencePointsUnityEngine_ImageConversionModule[12] = 
 {
-	{ 42855, 0, 0, 0, 0, 0, -1, kSequencePointKind_Normal, 0, 0 } /* seqPointIndex: 0 */,
-	{ 42855, 0, 0, 0, 0, 0, 16777215, kSequencePointKind_Normal, 0, 1 } /* seqPointIndex: 1 */,
-	{ 42855, 1, 40, 40, 9, 10, 0, kSequencePointKind_Normal, 0, 2 } /* seqPointIndex: 2 */,
-	{ 42855, 1, 41, 41, 13, 40, 1, kSequencePointKind_Normal, 0, 3 } /* seqPointIndex: 3 */,
-	{ 42855, 1, 41, 41, 13, 40, 4, kSequencePointKind_StepOut, 0, 4 } /* seqPointIndex: 4 */,
-	{ 42855, 1, 42, 42, 9, 10, 12, kSequencePointKind_Normal, 0, 5 } /* seqPointIndex: 5 */,
-	{ 42857, 0, 0, 0, 0, 0, -1, kSequencePointKind_Normal, 0, 6 } /* seqPointIndex: 6 */,
-	{ 42857, 0, 0, 0, 0, 0, 16777215, kSequencePointKind_Normal, 0, 7 } /* seqPointIndex: 7 */,
-	{ 42857, 1, 54, 54, 9, 10, 0, kSequencePointKind_Normal, 0, 8 } /* seqPointIndex: 8 */,
-	{ 42857, 1, 55, 55, 13, 48, 1, kSequencePointKind_Normal, 0, 9 } /* seqPointIndex: 9 */,
-	{ 42857, 1, 55, 55, 13, 48, 4, kSequencePointKind_StepOut, 0, 10 } /* seqPointIndex: 10 */,
-	{ 42857, 1, 56, 56, 9, 10, 12, kSequencePointKind_Normal, 0, 11 } /* seqPointIndex: 11 */,
+	{ 48462, 0, 0, 0, 0, 0, -1, kSequencePointKind_Normal, 0, 0 } /* seqPointIndex: 0 */,
+	{ 48462, 0, 0, 0, 0, 0, 16777215, kSequencePointKind_Normal, 0, 1 } /* seqPointIndex: 1 */,
+	{ 48462, 1, 40, 40, 9, 10, 0, kSequencePointKind_Normal, 0, 2 } /* seqPointIndex: 2 */,
+	{ 48462, 1, 41, 41, 13, 40, 1, kSequencePointKind_Normal, 0, 3 } /* seqPointIndex: 3 */,
+	{ 48462, 1, 41, 41, 13, 40, 4, kSequencePointKind_StepOut, 0, 4 } /* seqPointIndex: 4 */,
+	{ 48462, 1, 42, 42, 9, 10, 12, kSequencePointKind_Normal, 0, 5 } /* seqPointIndex: 5 */,
+	{ 48464, 0, 0, 0, 0, 0, -1, kSequencePointKind_Normal, 0, 6 } /* seqPointIndex: 6 */,
+	{ 48464, 0, 0, 0, 0, 0, 16777215, kSequencePointKind_Normal, 0, 7 } /* seqPointIndex: 7 */,
+	{ 48464, 1, 54, 54, 9, 10, 0, kSequencePointKind_Normal, 0, 8 } /* seqPointIndex: 8 */,
+	{ 48464, 1, 55, 55, 13, 48, 1, kSequencePointKind_Normal, 0, 9 } /* seqPointIndex: 9 */,
+	{ 48464, 1, 55, 55, 13, 48, 4, kSequencePointKind_StepOut, 0, 10 } /* seqPointIndex: 10 */,
+	{ 48464, 1, 56, 56, 9, 10, 12, kSequencePointKind_Normal, 0, 11 } /* seqPointIndex: 11 */,
 };
 #else
 extern Il2CppSequencePoint g_sequencePointsUnityEngine_ImageConversionModule[];
@@ -71,7 +71,7 @@ static const Il2CppSequencePointSourceFile g_sequencePointSourceFiles[1] = { NUL
 #if IL2CPP_MONO_DEBUGGER
 static const Il2CppTypeSourceFilePair g_typeSourceFiles[1] = 
 {
-	{ 6199, 1 },
+	{ 6932, 1 },
 };
 #else
 static const Il2CppTypeSourceFilePair g_typeSourceFiles[1] = { { 0, 0 } };

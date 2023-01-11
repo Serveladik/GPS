@@ -740,6 +740,8 @@ struct TrackableObserver_t0FEEC76FA771DE793B36C60F451B32F13D14656E;
 struct Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1;
 // System.Type
 struct Type_t;
+// System.Text.UnicodeEncoding
+struct UnicodeEncoding_t2C90D9E1E55C16081FACA57B229053C1EF05DAF0;
 // System.Void
 struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915;
 // LitJson.WrapperFactory
@@ -3864,9 +3866,15 @@ struct StringReader_t1A336148FF22A9584E759A9D720CC96C23E35DD8  : public TextRead
 struct StringWriter_tF48052BE4F980E5C85403221E835768E4156267D  : public TextWriter_tA9E5461506CF806E17B6BBBF2119359DEDA3F0F3
 {
 	// System.Text.StringBuilder System.IO.StringWriter::_sb
-	StringBuilder_t* ____sb_6;
+	StringBuilder_t* ____sb_7;
 	// System.Boolean System.IO.StringWriter::_isOpen
-	bool ____isOpen_7;
+	bool ____isOpen_8;
+};
+
+struct StringWriter_tF48052BE4F980E5C85403221E835768E4156267D_StaticFields
+{
+	// System.Text.UnicodeEncoding modreq(System.Runtime.CompilerServices.IsVolatile) System.IO.StringWriter::m_encoding
+	UnicodeEncoding_t2C90D9E1E55C16081FACA57B229053C1EF05DAF0* ___m_encoding_6;
 };
 
 // System.ApplicationException
@@ -21385,7 +21393,7 @@ IL_003b:
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 2352));
 		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 2353));
 		NullCheck(L_15);
-		VirtualActionInvoker1< String_t* >::Invoke(16 /* System.Void System.IO.TextWriter::Write(System.String) */, L_15, L_17);
+		VirtualActionInvoker1< String_t* >::Invoke(17 /* System.Void System.IO.TextWriter::Write(System.String) */, L_15, L_17);
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 2353));
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 2354));
 		goto IL_0078;
@@ -29658,7 +29666,7 @@ IL_0022:
 		TextWriter_tA9E5461506CF806E17B6BBBF2119359DEDA3F0F3* L_4 = __this->___writer_11;
 		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3801));
 		NullCheck(L_4);
-		VirtualActionInvoker1< Il2CppChar >::Invoke(12 /* System.Void System.IO.TextWriter::Write(System.Char) */, L_4, ((int32_t)32));
+		VirtualActionInvoker1< Il2CppChar >::Invoke(13 /* System.Void System.IO.TextWriter::Write(System.Char) */, L_4, ((int32_t)32));
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3801));
 		// for (int i = 0; i < indentation; i++)
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3802));
@@ -29689,7 +29697,7 @@ IL_0041:
 		String_t* L_10 = ___str0;
 		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3806));
 		NullCheck(L_9);
-		VirtualActionInvoker1< String_t* >::Invoke(16 /* System.Void System.IO.TextWriter::Write(System.String) */, L_9, L_10);
+		VirtualActionInvoker1< String_t* >::Invoke(17 /* System.Void System.IO.TextWriter::Write(System.String) */, L_9, L_10);
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3806));
 		// }
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3807));
@@ -29791,7 +29799,7 @@ IL_0022:
 		TextWriter_tA9E5461506CF806E17B6BBBF2119359DEDA3F0F3* L_6 = __this->___writer_11;
 		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3820));
 		NullCheck(L_6);
-		VirtualActionInvoker1< Il2CppChar >::Invoke(12 /* System.Void System.IO.TextWriter::Write(System.Char) */, L_6, ((int32_t)44));
+		VirtualActionInvoker1< Il2CppChar >::Invoke(13 /* System.Void System.IO.TextWriter::Write(System.Char) */, L_6, ((int32_t)44));
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3820));
 	}
 
@@ -29838,7 +29846,7 @@ IL_004d:
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3824));
 		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3825));
 		NullCheck(L_11);
-		VirtualActionInvoker1< String_t* >::Invoke(16 /* System.Void System.IO.TextWriter::Write(System.String) */, L_11, L_12);
+		VirtualActionInvoker1< String_t* >::Invoke(17 /* System.Void System.IO.TextWriter::Write(System.String) */, L_11, L_12);
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3825));
 	}
 
@@ -29896,7 +29904,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonWriter_PutString_m5725D66D3845101B5F
 		TextWriter_tA9E5461506CF806E17B6BBBF2119359DEDA3F0F3* L_1 = __this->___writer_11;
 		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3833));
 		NullCheck(L_1);
-		VirtualActionInvoker1< Il2CppChar >::Invoke(12 /* System.Void System.IO.TextWriter::Write(System.Char) */, L_1, ((int32_t)34));
+		VirtualActionInvoker1< Il2CppChar >::Invoke(13 /* System.Void System.IO.TextWriter::Write(System.Char) */, L_1, ((int32_t)34));
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3833));
 		// int n = str.Length;
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3834));
@@ -29995,7 +30003,7 @@ IL_0067:
 		TextWriter_tA9E5461506CF806E17B6BBBF2119359DEDA3F0F3* L_11 = __this->___writer_11;
 		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3844));
 		NullCheck(L_11);
-		VirtualActionInvoker1< String_t* >::Invoke(16 /* System.Void System.IO.TextWriter::Write(System.String) */, L_11, _stringLiteral785F17F45C331C415D0A7458E6AAC36966399C51);
+		VirtualActionInvoker1< String_t* >::Invoke(17 /* System.Void System.IO.TextWriter::Write(System.String) */, L_11, _stringLiteral785F17F45C331C415D0A7458E6AAC36966399C51);
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3844));
 		// continue;
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3845));
@@ -30009,7 +30017,7 @@ IL_007d:
 		TextWriter_tA9E5461506CF806E17B6BBBF2119359DEDA3F0F3* L_12 = __this->___writer_11;
 		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3847));
 		NullCheck(L_12);
-		VirtualActionInvoker1< String_t* >::Invoke(16 /* System.Void System.IO.TextWriter::Write(System.String) */, L_12, _stringLiteralB78F235D4291950A7D101307609C259F3E1F033F);
+		VirtualActionInvoker1< String_t* >::Invoke(17 /* System.Void System.IO.TextWriter::Write(System.String) */, L_12, _stringLiteralB78F235D4291950A7D101307609C259F3E1F033F);
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3847));
 		// continue;
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3848));
@@ -30023,7 +30031,7 @@ IL_0093:
 		TextWriter_tA9E5461506CF806E17B6BBBF2119359DEDA3F0F3* L_13 = __this->___writer_11;
 		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3850));
 		NullCheck(L_13);
-		VirtualActionInvoker1< String_t* >::Invoke(16 /* System.Void System.IO.TextWriter::Write(System.String) */, L_13, _stringLiteral7F3238CD8C342B06FB9AB185C610175C84625462);
+		VirtualActionInvoker1< String_t* >::Invoke(17 /* System.Void System.IO.TextWriter::Write(System.String) */, L_13, _stringLiteral7F3238CD8C342B06FB9AB185C610175C84625462);
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3850));
 		// continue;
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3851));
@@ -30037,7 +30045,7 @@ IL_00a9:
 		TextWriter_tA9E5461506CF806E17B6BBBF2119359DEDA3F0F3* L_14 = __this->___writer_11;
 		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3853));
 		NullCheck(L_14);
-		VirtualActionInvoker1< Il2CppChar >::Invoke(12 /* System.Void System.IO.TextWriter::Write(System.Char) */, L_14, ((int32_t)92));
+		VirtualActionInvoker1< Il2CppChar >::Invoke(13 /* System.Void System.IO.TextWriter::Write(System.Char) */, L_14, ((int32_t)92));
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3853));
 		// writer.Write (str[i]);
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3854));
@@ -30051,7 +30059,7 @@ IL_00a9:
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3855));
 		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3856));
 		NullCheck(L_15);
-		VirtualActionInvoker1< Il2CppChar >::Invoke(12 /* System.Void System.IO.TextWriter::Write(System.Char) */, L_15, L_18);
+		VirtualActionInvoker1< Il2CppChar >::Invoke(13 /* System.Void System.IO.TextWriter::Write(System.Char) */, L_15, L_18);
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3856));
 		// continue;
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3857));
@@ -30065,7 +30073,7 @@ IL_00cf:
 		TextWriter_tA9E5461506CF806E17B6BBBF2119359DEDA3F0F3* L_19 = __this->___writer_11;
 		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3859));
 		NullCheck(L_19);
-		VirtualActionInvoker1< String_t* >::Invoke(16 /* System.Void System.IO.TextWriter::Write(System.String) */, L_19, _stringLiteralA7C3FCA8C63E127B542B38A5CA5E3FEEDDD1B122);
+		VirtualActionInvoker1< String_t* >::Invoke(17 /* System.Void System.IO.TextWriter::Write(System.String) */, L_19, _stringLiteralA7C3FCA8C63E127B542B38A5CA5E3FEEDDD1B122);
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3859));
 		// continue;
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3860));
@@ -30079,7 +30087,7 @@ IL_00e5:
 		TextWriter_tA9E5461506CF806E17B6BBBF2119359DEDA3F0F3* L_20 = __this->___writer_11;
 		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3862));
 		NullCheck(L_20);
-		VirtualActionInvoker1< String_t* >::Invoke(16 /* System.Void System.IO.TextWriter::Write(System.String) */, L_20, _stringLiteral5962E944D7340CE47999BF097B4AFD70C1501FB9);
+		VirtualActionInvoker1< String_t* >::Invoke(17 /* System.Void System.IO.TextWriter::Write(System.String) */, L_20, _stringLiteral5962E944D7340CE47999BF097B4AFD70C1501FB9);
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3862));
 		// continue;
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3863));
@@ -30143,7 +30151,7 @@ IL_0114:
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3870));
 		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3871));
 		NullCheck(L_28);
-		VirtualActionInvoker1< Il2CppChar >::Invoke(12 /* System.Void System.IO.TextWriter::Write(System.Char) */, L_28, L_31);
+		VirtualActionInvoker1< Il2CppChar >::Invoke(13 /* System.Void System.IO.TextWriter::Write(System.Char) */, L_28, L_31);
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3871));
 		// continue;
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3872));
@@ -30171,7 +30179,7 @@ IL_0130:
 		TextWriter_tA9E5461506CF806E17B6BBBF2119359DEDA3F0F3* L_36 = __this->___writer_11;
 		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3877));
 		NullCheck(L_36);
-		VirtualActionInvoker1< String_t* >::Invoke(16 /* System.Void System.IO.TextWriter::Write(System.String) */, L_36, _stringLiteralDA666908BB15F4E1D2649752EC5DCBD0D5C64699);
+		VirtualActionInvoker1< String_t* >::Invoke(17 /* System.Void System.IO.TextWriter::Write(System.String) */, L_36, _stringLiteralDA666908BB15F4E1D2649752EC5DCBD0D5C64699);
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3877));
 		// writer.Write (hex_seq);
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3878));
@@ -30179,7 +30187,7 @@ IL_0130:
 		CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB* L_38 = __this->___hex_seq_4;
 		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3879));
 		NullCheck(L_37);
-		VirtualActionInvoker1< CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB* >::Invoke(13 /* System.Void System.IO.TextWriter::Write(System.Char[]) */, L_37, L_38);
+		VirtualActionInvoker1< CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB* >::Invoke(14 /* System.Void System.IO.TextWriter::Write(System.Char[]) */, L_37, L_38);
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3879));
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3880));
 	}
@@ -30212,7 +30220,7 @@ IL_016b:
 		TextWriter_tA9E5461506CF806E17B6BBBF2119359DEDA3F0F3* L_43 = __this->___writer_11;
 		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3885));
 		NullCheck(L_43);
-		VirtualActionInvoker1< Il2CppChar >::Invoke(12 /* System.Void System.IO.TextWriter::Write(System.Char) */, L_43, ((int32_t)34));
+		VirtualActionInvoker1< Il2CppChar >::Invoke(13 /* System.Void System.IO.TextWriter::Write(System.Char) */, L_43, ((int32_t)34));
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3885));
 		// }
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3886));
@@ -30630,7 +30638,7 @@ IL_003d:
 		TextWriter_tA9E5461506CF806E17B6BBBF2119359DEDA3F0F3* L_9 = __this->___writer_11;
 		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3958));
 		NullCheck(L_9);
-		VirtualActionInvoker1< String_t* >::Invoke(16 /* System.Void System.IO.TextWriter::Write(System.String) */, L_9, _stringLiteralC31E66F919D06AD2730738EF7F884271E99BB7DA);
+		VirtualActionInvoker1< String_t* >::Invoke(17 /* System.Void System.IO.TextWriter::Write(System.String) */, L_9, _stringLiteralC31E66F919D06AD2730738EF7F884271E99BB7DA);
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 3958));
 	}
 
@@ -31422,7 +31430,7 @@ IL_0075:
 		TextWriter_tA9E5461506CF806E17B6BBBF2119359DEDA3F0F3* L_20 = __this->___writer_11;
 		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 4131));
 		NullCheck(L_20);
-		VirtualActionInvoker1< Il2CppChar >::Invoke(12 /* System.Void System.IO.TextWriter::Write(System.Char) */, L_20, ((int32_t)32));
+		VirtualActionInvoker1< Il2CppChar >::Invoke(13 /* System.Void System.IO.TextWriter::Write(System.Char) */, L_20, ((int32_t)32));
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 4131));
 		// i >= 0; i--)
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 4132));
@@ -31449,7 +31457,7 @@ IL_0087:
 		TextWriter_tA9E5461506CF806E17B6BBBF2119359DEDA3F0F3* L_24 = __this->___writer_11;
 		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 4136));
 		NullCheck(L_24);
-		VirtualActionInvoker1< String_t* >::Invoke(16 /* System.Void System.IO.TextWriter::Write(System.String) */, L_24, _stringLiteral1168E92C164109D6220480DEDA987085B2A21155);
+		VirtualActionInvoker1< String_t* >::Invoke(17 /* System.Void System.IO.TextWriter::Write(System.String) */, L_24, _stringLiteral1168E92C164109D6220480DEDA987085B2A21155);
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 4136));
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 4137));
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 4138));
@@ -31463,7 +31471,7 @@ IL_00a8:
 		TextWriter_tA9E5461506CF806E17B6BBBF2119359DEDA3F0F3* L_25 = __this->___writer_11;
 		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 4140));
 		NullCheck(L_25);
-		VirtualActionInvoker1< Il2CppChar >::Invoke(12 /* System.Void System.IO.TextWriter::Write(System.Char) */, L_25, ((int32_t)58));
+		VirtualActionInvoker1< Il2CppChar >::Invoke(13 /* System.Void System.IO.TextWriter::Write(System.Char) */, L_25, ((int32_t)58));
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsNRSDK + 4140));
 	}
 
@@ -41654,47 +41662,47 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_Distance_m2314DB9B8
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___a0), (&___b1));
 	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0), (&V_1), (&V_2));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Vector3_Distance_m2314DB9B8BD01157E013DF87BEA557375C7F9FF9_RuntimeMethod_var, NULL, methodExecutionContextParameters, methodExecutionContextLocals);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 5934));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 5935));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 6049));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 6050));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 5936));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 5937));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 6051));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 6052));
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___a0;
 		float L_1 = L_0.___x_2;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2 = ___b1;
 		float L_3 = L_2.___x_2;
 		V_0 = ((float)il2cpp_codegen_subtract(L_1, L_3));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 5938));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 6053));
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4 = ___a0;
 		float L_5 = L_4.___y_3;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = ___b1;
 		float L_7 = L_6.___y_3;
 		V_1 = ((float)il2cpp_codegen_subtract(L_5, L_7));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 5939));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 6054));
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8 = ___a0;
 		float L_9 = L_8.___z_4;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10 = ___b1;
 		float L_11 = L_10.___z_4;
 		V_2 = ((float)il2cpp_codegen_subtract(L_9, L_11));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 5940));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 6055));
 		float L_12 = V_0;
 		float L_13 = V_0;
 		float L_14 = V_1;
 		float L_15 = V_1;
 		float L_16 = V_2;
 		float L_17 = V_2;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 5941));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 6056));
 		il2cpp_codegen_runtime_class_init_inline(Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
 		double L_18;
 		L_18 = sqrt(((double)((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_12, L_13)), ((float)il2cpp_codegen_multiply(L_14, L_15)))), ((float)il2cpp_codegen_multiply(L_16, L_17))))));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 5941));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 6056));
 		V_3 = ((float)L_18);
 		goto IL_0040;
 	}
 
 IL_0040:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 5942));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 6057));
 		float L_19 = V_3;
 		return L_19;
 	}

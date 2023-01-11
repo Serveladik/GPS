@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/NRSDK/Demos/Input-ControllerInfo.unity
     guid: 6ef6276ed2b85294cac90487e2b5ee3d
+  - enabled: 0
+    path: Assets/ARLocation/Mapbox Routes/Scenes/Mapbox Route With Search.unity
+    guid: 3d7f39a6ae7594e8191b21466d209e8a
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 744b813df90924c169af73489b8325de,
       type: 2}

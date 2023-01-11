@@ -20300,7 +20300,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SupportClass_WriteStackTrace_mC2E42FB36C
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsPhoton3Unity3D + 15156));
 		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsPhoton3Unity3D + 15157));
 		NullCheck(L_2);
-		VirtualActionInvoker1< String_t* >::Invoke(19 /* System.Void System.IO.TextWriter::WriteLine(System.String) */, L_2, L_4);
+		VirtualActionInvoker1< String_t* >::Invoke(20 /* System.Void System.IO.TextWriter::WriteLine(System.String) */, L_2, L_4);
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsPhoton3Unity3D + 15157));
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsPhoton3Unity3D + 15158));
 		TextWriter_tA9E5461506CF806E17B6BBBF2119359DEDA3F0F3* L_5 = ___stream1;
@@ -20312,7 +20312,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SupportClass_WriteStackTrace_mC2E42FB36C
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsPhoton3Unity3D + 15159));
 		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsPhoton3Unity3D + 15160));
 		NullCheck(L_5);
-		VirtualActionInvoker1< String_t* >::Invoke(19 /* System.Void System.IO.TextWriter::WriteLine(System.String) */, L_5, L_7);
+		VirtualActionInvoker1< String_t* >::Invoke(20 /* System.Void System.IO.TextWriter::WriteLine(System.String) */, L_5, L_7);
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsPhoton3Unity3D + 15160));
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsPhoton3Unity3D + 15161));
 		TextWriter_tA9E5461506CF806E17B6BBBF2119359DEDA3F0F3* L_8 = ___stream1;

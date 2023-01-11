@@ -31496,7 +31496,7 @@ IL_02a0:
 		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsPhoton3Unity3D + 5096));
 		NullCheck(L_112);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_114;
-		L_114 = VirtualFuncInvoker1< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, String_t* >::Invoke(17 /* System.Byte[] System.Text.Encoding::GetBytes(System.String) */, L_112, L_113);
+		L_114 = VirtualFuncInvoker1< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, String_t* >::Invoke(18 /* System.Byte[] System.Text.Encoding::GetBytes(System.String) */, L_112, L_113);
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsPhoton3Unity3D + 5096));
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_115 = V_11;
 		String_t* L_116 = V_16;
@@ -31793,7 +31793,7 @@ IL_00f4:
 		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsPhoton3Unity3D + 5153));
 		NullCheck(L_36);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_38;
-		L_38 = VirtualFuncInvoker1< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, String_t* >::Invoke(17 /* System.Byte[] System.Text.Encoding::GetBytes(System.String) */, L_36, L_37);
+		L_38 = VirtualFuncInvoker1< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, String_t* >::Invoke(18 /* System.Byte[] System.Text.Encoding::GetBytes(System.String) */, L_36, L_37);
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsPhoton3Unity3D + 5153));
 		V_3 = L_38;
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsPhoton3Unity3D + 5154));
