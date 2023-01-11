@@ -730,7 +730,7 @@ MonoBehaviour:
   MapboxRoute: {fileID: 431329718}
   RoutePathRenderer: {fileID: 266481004}
   NextTargetPathRenderer: {fileID: 266481005}
-  DebugMode: 1
+  DebugMode: 0
 --- !u!114 &266481004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -991,7 +991,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ArrowSprite: {fileID: 21300000, guid: 19a300465515241c2bb5670f7b18e69b, type: 3}
   NeutralArrowDirection: 1
-  Margin: 80
+  Margin: 20
 --- !u!1 &470501574
 GameObject:
   m_ObjectHideFlags: 0
@@ -2465,8 +2465,8 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.1
-  far clip plane: 20
+  near clip plane: 0.01
+  far clip plane: 200
   field of view: 60
   orthographic: 0
   orthographic size: 5

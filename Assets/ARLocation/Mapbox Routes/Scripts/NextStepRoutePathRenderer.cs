@@ -44,6 +44,7 @@ namespace ARLocation.MapboxRoutes
             state.LineRenderer.material = Settings.LineMaterial;
             state.LineRenderer.textureMode = LineTextureMode.Tile;
             state.LineRenderer.numCornerVertices = 2;
+            state.Go.SetActive(false);
         }
 
         public void OnDisable()
@@ -54,6 +55,7 @@ namespace ARLocation.MapboxRoutes
 
         public override void Init(RoutePathRendererArgs args)
         {
+            state.Go.SetActive(true);
         }
 
         public override void OnRouteUpdate(RoutePathRendererArgs args)

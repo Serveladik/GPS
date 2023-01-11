@@ -46,6 +46,7 @@ namespace ARLocation.MapboxRoutes
 
             state.PathLineRenderer = state.Go.AddComponent<NewPathLineRenderer>();
             state.PathLineRenderer.MaxNumberOfUpdates = 0;
+            state.Go.SetActive(false);
         }
 
         public void OnDisable()
@@ -56,6 +57,7 @@ namespace ARLocation.MapboxRoutes
 
         public override void Init(RoutePathRendererArgs args)
         {
+            state.Go.SetActive(true);
             state.Path = ScriptableObject.CreateInstance<LocationPath>();
             state.Path.Locations = new Location[args.RouteGeometry.coordinates.Count];
 
