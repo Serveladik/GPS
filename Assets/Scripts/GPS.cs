@@ -6,6 +6,134 @@ using TMPro;
 
 public class GPS : MonoBehaviour
 {
+    public static string lang = "en";
+    void Awake()
+    {
+        StartCoroutine(GetLanguage());
+    }
+    IEnumerator GetLanguage()
+    {
+        foreach(var item in Languages)
+        {
+            Debug.Log(language.ToString() + " : " + item.Value.ToString().Trim());
+            if(language.ToString().Contains(item.Value.ToString().Trim()))
+            {
+                lang = item.Key.ToString();
+                Debug.LogError(lang);
+                yield break;
+            }
+        }
+    }
+    public enum Language 
+    {
+        Arabic	    ,
+        Albanian    ,
+        Azerbaijan  ,
+        Bengali     ,
+        Bosnian	    ,
+        Burmese     ,
+        Czech       ,
+        Chinese     ,
+        Castilian   ,
+        CentralKhmer  ,
+        Danish      ,
+        Dutch       ,
+        English     ,
+        French      ,
+        Finnish     ,
+        German      ,
+        Georgian    ,
+        Greek       ,
+        Gujarati    ,
+        Hebrew	    ,
+        Hindi       ,
+        Hungarian   ,
+        Indonesian  ,
+        Icelandic   ,
+        Italian     ,
+        Irish       ,
+        Japanese    ,
+        Kazakh	    ,
+        Korean      ,
+        Lao         ,
+        Latvian     ,
+        Lithuanian  ,
+        Mongolian   ,
+        Moldovan    ,
+        Norwegian   ,
+        Polish      ,
+        Portuguese  ,
+        Persian     ,
+        Slovak      ,
+        Serbian	    ,
+        Swedish	    ,
+        Tagalog     ,
+        Thai        ,
+        Telugu      ,
+        Turkmen	    ,
+        Turkish	    ,
+        Valencian   ,
+        Vietnamese   ,
+        TraditionalChinese,
+        SimplifiedChinese,
+        TaiwaneseMandarin,
+    };
+
+    public Language language;
+    public static Dictionary<string, string> Languages  = new Dictionary<string, string>()
+    {
+        {"ar", "Arabic	        "},
+        {"sq", "Albanian        "},
+        {"az", "Azerbaijani     "},
+        {"bn", "Bengali         "},
+        {"bs", "Bosnian	        "},
+        {"my", "Burmese         "},
+        {"cs", "Czech           "},
+        {"zh", "Chinese         "},
+        {"es", "Castilian       "},
+        {"km", "CentralKhmer   "},
+        {"da", "Danish          "},
+        {"nl", "Dutch           "},
+        {"en", "English         "},
+        {"fr", "French          "},
+        {"fi", "Finnish         "},
+        {"de", "German          "},
+        {"ka", "Georgian        "},
+        {"el", "Greek           "},
+        {"gu", "Gujarati        "},	
+        {"he", "Hebrew	        "},
+        {"hi", "Hindi           "},
+        {"hu", "Hungarian       "},
+        {"id", "Indonesian      "},
+        {"is", "Icelandic       "},
+        {"it", "Italian         "},
+        {"ga", "Irish           "},
+        {"ja", "Japanese        "},
+        {"kk", "Kazakh	        "},
+        {"ko", "Korean          "},
+        {"lo", "Lao             "},
+        {"lv", "Latvian         "},
+        {"lt", "Lithuanian      "},
+        {"mn", "Mongolian       "},
+        {"ro", "Moldovan        "},
+        {"nb", "Norwegian       "},
+        {"pl", "Polish          "},
+        {"pt", "Portuguese      "},
+        {"fa", "Persian         "},
+        {"sk", "Slovak          "},
+        {"sr", "Serbian	        "},
+        {"sv", "Swedish	        "},
+        {"tl", "Tagalog         "},
+        {"th", "Thai            "},
+        {"te", "Telugu          "},
+        {"tk", "Turkmen	        "},
+        {"tr", "Turkish	        "},
+        {"ca", "Valencian       "},
+        {"vi", "Vietnamese      "},
+        {"zh_Hant", "TraditionalChinese    "},
+        {"zh_Hans", "SimplifiedChinese     "},
+        {"zh_TW",   "TaiwaneseMandarin       "},
+    };
     public TextMeshProUGUI gpsStatus;
     public TextMeshProUGUI gpsData;
     void Start()
