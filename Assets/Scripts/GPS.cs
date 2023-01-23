@@ -10,8 +10,8 @@ public class GPS : MonoBehaviour
 {
     [SerializeField] public const string apiKey = "AIzaSyCXBBKmcWn_l8dVHl7pwZcZoN4C-2WeGzQ";
     public static string lang = "en";
-    public int searchRadius = 500;
     public string searchInput;
+    public int searchRadius = 500;
     string queryURL;
     public enum SearchType {keyword = 0, name = 1}
     public SearchType searchType;
