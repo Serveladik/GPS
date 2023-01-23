@@ -38,7 +38,7 @@ public class GPS : MonoBehaviour
 
         }
     }
-    #region Search Type
+    #region Search Type Filter
     public void FillSeacrhTypeDropdown()
     {
         for(int i = 0; i < System.Enum.GetValues(typeof(SearchType)).Length; i++)
@@ -195,10 +195,8 @@ public class GPS : MonoBehaviour
 
     void UpdateGPS()
     {
-        Debug.Log("GOIN1");
         if(Input.location.status == LocationServiceStatus.Running)
         {
-            Debug.Log("GOIN2");
             gpsStatus.text = "" + "\n" +
             "Latitude/Longitude: " + Input.location.lastData.latitude + "\u00B0" + ", " + Input.location.lastData.longitude + "\u00B0";
             gpsData.text = "Horizontal Accuracy: " + Input.location.lastData.horizontalAccuracy + "m" + "\n" +
