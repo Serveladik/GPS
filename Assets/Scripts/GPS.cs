@@ -24,20 +24,6 @@ public class GPS : MonoBehaviour
         FillSeacrhTypeDropdown();
         StartCoroutine(GetLanguage());
     }
-
-    public void FillSeacrhTypeDropdown()
-    {
-        for(int i = 0; i < System.Enum.GetValues(typeof(SearchType)).Length; i++)
-        {
-            string enumName = (Enum.GetName(typeof(SearchType), i));
-            searchTypeDropdown.options.Add(new TMP_Dropdown.OptionData() {text = enumName});
-        }
-    }
-    void OnDropdownValueChanged(TMP_Dropdown change)
-    {
-        searchType = (SearchType)change.value;
-    }
-
     public void SendQuery()
     {
         queryURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=" + apiKey + "&location=50.4302,30.4555&radius=" + searchRadius + "&" + searchType + "=" + searchInput + "&language=" + lang;
@@ -52,6 +38,21 @@ public class GPS : MonoBehaviour
 
         }
     }
+    #region Search Type
+    public void FillSeacrhTypeDropdown()
+    {
+        for(int i = 0; i < System.Enum.GetValues(typeof(SearchType)).Length; i++)
+        {
+            string enumName = (Enum.GetName(typeof(SearchType), i));
+            searchTypeDropdown.options.Add(new TMP_Dropdown.OptionData() {text = enumName});
+        }
+    }
+    void OnDropdownValueChanged(TMP_Dropdown change)
+    {
+        searchType = (SearchType)change.value;
+    }
+    #endregion
+    #region Language
     IEnumerator GetLanguage()
     {
         foreach(var item in Languages)
@@ -174,6 +175,7 @@ public class GPS : MonoBehaviour
         {"zh_Hans", "SimplifiedChinese     "},
         {"zh_TW",   "TaiwaneseMandarin       "},
     };
+    #endregion
     public TextMeshProUGUI gpsStatus;
     public TextMeshProUGUI gpsData;
     void Start()
