@@ -1,15 +1,56 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Android;
 using TMPro;
+using UnityEngine.Networking;
 
 public class GPS : MonoBehaviour
 {
+    [SerializeField] public const string apiKey = "AIzaSyCXBBKmcWn_l8dVHl7pwZcZoN4C-2WeGzQ";
     public static string lang = "en";
+    public int searchRadius = 500;
+    public string searchInput;
+    string queryURL;
+    public enum SearchType {keyword = 0, name = 1}
+    public SearchType searchType;
+    public Language language;
+    public TMP_Dropdown searchTypeDropdown;
     void Awake()
     {
+        searchTypeDropdown.onValueChanged.AddListener(delegate { OnDropdownValueChanged(searchTypeDropdown); });
+
+        FillSeacrhTypeDropdown();
         StartCoroutine(GetLanguage());
+    }
+
+    public void FillSeacrhTypeDropdown()
+    {
+        for(int i = 0; i < System.Enum.GetValues(typeof(SearchType)).Length; i++)
+        {
+            string enumName = (Enum.GetName(typeof(SearchType), i));
+            searchTypeDropdown.options.Add(new TMP_Dropdown.OptionData() {text = enumName});
+        }
+    }
+    void OnDropdownValueChanged(TMP_Dropdown change)
+    {
+        searchType = (SearchType)change.value;
+    }
+
+    public void SendQuery()
+    {
+        queryURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=" + apiKey + "&location=50.4302,30.4555&radius=" + searchRadius + "&" + searchType + "=" + searchInput + "&language=" + lang;
+        StartCoroutine(GetQuery(queryURL));
+    }
+    IEnumerator GetQuery(string URL)
+    {
+        using (UnityWebRequest www = UnityWebRequest.Get(URL))
+        {
+            yield return www.SendWebRequest();
+            Debug.Log(www.downloadHandler.text);
+
+        }
     }
     IEnumerator GetLanguage()
     {
@@ -79,7 +120,6 @@ public class GPS : MonoBehaviour
         TaiwaneseMandarin,
     };
 
-    public Language language;
     public static Dictionary<string, string> Languages  = new Dictionary<string, string>()
     {
         {"ar", "Arabic	        "},
