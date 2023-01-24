@@ -542,6 +542,7 @@ GameObject:
   m_Component:
   - component: {fileID: 138905977}
   - component: {fileID: 138905976}
+  - component: {fileID: 138905978}
   m_Layer: 0
   m_Name: AR Session Origin
   m_TagString: Untagged
@@ -580,6 +581,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &138905978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138905975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 728ad7fae8e460a4ba41265c7308d757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AnchorPrefab: {fileID: 2406714923471210865, guid: 9427d144b9f504ecaa05db95fe5a286a,
+    type: 3}
 --- !u!1 &149152311
 GameObject:
   m_ObjectHideFlags: 0
@@ -3045,11 +3060,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c76dfcef3696ca48bc16d5a8bc11633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _arAnchorManager: {fileID: 138905978}
   searchInput: 
   searchRadius: 500
   searchType: 0
   language: 26
   searchTypeDropdown: {fileID: 2119167798}
+  arrowPrefab: {fileID: 2406714923471210865, guid: 9427d144b9f504ecaa05db95fe5a286a,
+    type: 3}
   gpsStatus: {fileID: 1766187325}
   gpsData: {fileID: 2102503036}
 --- !u!4 &1441249337

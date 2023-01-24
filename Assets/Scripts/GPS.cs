@@ -5,9 +5,15 @@ using UnityEngine;
 using UnityEngine.Android;
 using TMPro;
 using UnityEngine.Networking;
+using Google.XR.ARCoreExtensions;
+using UnityEngine.XR.ARFoundation;
+using SimpleJSON;
 
 public class GPS : MonoBehaviour
 {
+    public static GPS Instance;
+    [Header("Geospatial")]
+    [SerializeField] private ARAnchorManager _arAnchorManager;
     [SerializeField] public const string apiKey = "AIzaSyCXBBKmcWn_l8dVHl7pwZcZoN4C-2WeGzQ";
     public static string lang = "en";
     public string searchInput;
@@ -17,8 +23,13 @@ public class GPS : MonoBehaviour
     public SearchType searchType;
     public Language language;
     public TMP_Dropdown searchTypeDropdown;
+    public GameObject arrowPrefab;
     void Awake()
     {
+        if(Instance == null)
+        {
+            Instance = this;
+        }
         searchTypeDropdown.onValueChanged.AddListener(delegate { OnDropdownValueChanged(searchTypeDropdown); });
 
         FillSeacrhTypeDropdown();
@@ -26,18 +37,86 @@ public class GPS : MonoBehaviour
     }
     public void SendQuery()
     {
-        queryURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=" + apiKey + "&location=50.4302,30.4555&radius=" + searchRadius + "&" + searchType + "=" + searchInput + "&language=" + lang;
+        queryURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=" + apiKey + "&location=50.42686389409531,30.656026827770518&radius=" + searchRadius + "&" + searchType + "=" + searchInput + "&language=" + lang;
+        Debug.Log("URL:" + queryURL);
         StartCoroutine(GetQuery(queryURL));
     }
+    double _Latitude;
+    double _Longitude;
+    double _Altitude;
     IEnumerator GetQuery(string URL)
     {
+        Place(arrowPrefab, new GeospatialPose
+        {
+            Latitude = 50.42686389409531,
+            Longitude = 30.656026827770518,
+            Altitude = 3,
+        });
         using (UnityWebRequest www = UnityWebRequest.Get(URL))
         {
             yield return www.SendWebRequest();
-            Debug.Log(www.downloadHandler.text);
+            //Debug.Log(www.downloadHandler.text);
+        
+            if (www.isNetworkError || www.isHttpError)
+            {
+                Debug.Log(www.error);
+                Debug.LogError("Request error");
+                
+            }
+            else
+            {
+				//JSONNode root = JSONNode.Parse(www.downloadHandler.text);
+                //JSONArray nodes = root["results"].AsArray;
+                ////JSONObject LAT = nodes;
+                //foreach(JSONNode n in root)
+                //{
+                //    foreach(JSONNode j in n)
+                //    {
+                //        string geo = j["lat"];
+                //        string country = j["lng"];
+                //        Debug.LogError(geo);
+                //        Debug.LogError(country);
+                //    }
+                //    // [ ... ]
+                //}
+                //JSONObject node2 = (JSONObject)JSON.Parse(nodes);
+				//foreach (JSONNode node in nodes)
+				//{
+				//	pin.id = node["id"];
+				//	pin.name = node["name"];
+				//	pin.description = node["description"];
+				//	pin.image = node["image"];
+				//	pin.type = node["type_id"];
+				//	pin.difficulty = node["difficulty_id"];
+				//	pin.rarity = node["rarity_id"];
+				//	pin.creator = node["creator_username"];
+				//	JSONObject location = node["location"].AsObject;
+				//	pin.lat = location["lat"];
+				//	pin.lon = location["lon"];
+//
+				//	PinInstantiate.Instance.SpawnPinAR(pin);
+				//	Debug.LogError("Spawned: " + pin.name);
+				//}
+				//_Latitude = root["lat"].AsDouble;
+				//_Longitude = root["lng"].AsDouble;
+				//_Altitude = 3;
 
+			}
         }
     }
+    private ARGeospatialAnchor Place(GameObject obj, GeospatialPose pose, bool terrain = false)
+    {
+        var quaternion = Quaternion.AngleAxis(180f - (float) pose.Heading, Vector3.up);
+        
+        var anchor = terrain
+            ? _arAnchorManager.ResolveAnchorOnTerrain(pose.Latitude, pose.Longitude, pose.Altitude, quaternion)
+            : _arAnchorManager.AddAnchor(pose.Latitude, pose.Longitude, pose.Altitude, quaternion);
+        if (anchor == null) return null;
+        Instantiate(obj, anchor.transform);
+        Debug.LogError("PLACED:" + anchor.transform);
+        return anchor;
+    }
+
     #region Search Type Filter
     public void FillSeacrhTypeDropdown()
     {

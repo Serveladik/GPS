@@ -30,7 +30,7 @@ namespace ARLocation.MapboxRoutes
         public IEnumerator QueryLocal(string text, bool verbose = false)
         {
             var term = text;
-            var url = Uri.EscapeUriString($"https://api.mapbox.com/geocoding/v5/mapbox.places/{term}.json?access_token={AccessToken}&language=" + GPS.lang);
+            var url = Uri.EscapeUriString($"https://api.mapbox.com/geocoding/v5/mapbox.places/{term}.json?access_token={AccessToken}&location=50.4302,30.4555&radius=" + GPS.Instance.searchRadius + "&" + GPS.Instance.searchType + "=" + GPS.Instance.searchInput + "&language=" + GPS.lang);
             Debug.LogError(url);
 
             errorMessage = null;
